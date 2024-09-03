@@ -129,9 +129,11 @@
   <ItemGroup>
     <ClCompile Include="binaryTree.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="printList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="binaryTree.h" />
+    <ClInclude Include="printList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
