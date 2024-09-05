@@ -6,6 +6,7 @@
 // Traversals
 #include "preTraversal.h"
 #include "inTraversal.h"
+#include "postTraversal.h"
 
 int main()
 {
@@ -17,5 +18,9 @@ int main()
 
     list = {};
     inTraverse(list, tree);
+    printList(list);
+
+    list = {};
+    postTraverse(list, tree);
     printList(list);
 }
