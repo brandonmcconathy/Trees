@@ -5,6 +5,7 @@
 
 // Traversals
 #include "preTraversal.h"
+#include "inTraversal.h"
 
 int main()
 {
@@ -12,5 +13,9 @@ int main()
     
     std::vector<int> list;
     preTraverse(list, tree);
+    printList(list);
+
+    list = {};
+    inTraverse(list, tree);
     printList(list);
 }

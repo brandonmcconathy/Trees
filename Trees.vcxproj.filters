@@ -27,6 +27,9 @@
     <ClCompile Include="preTraverse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="inTraversal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="binaryTree.h">
@@ -36,6 +39,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="preTraversal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="inTraversal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

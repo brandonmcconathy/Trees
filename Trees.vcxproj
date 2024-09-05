@@ -128,12 +128,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="binaryTree.cpp" />
+    <ClCompile Include="inTraversal.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="preTraverse.cpp" />
     <ClCompile Include="printList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="binaryTree.h" />
+    <ClInclude Include="inTraversal.h" />
     <ClInclude Include="preTraversal.h" />
     <ClInclude Include="printList.h" />
   </ItemGroup>
