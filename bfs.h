@@ -1,4 +1,4 @@
 #pragma once
 #include "binaryTree.h"
 
-int bfs(binaryTree* tree, int val);
+bool bfs(binaryTree* tree, int val);
