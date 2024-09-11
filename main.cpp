@@ -10,6 +10,7 @@
 
 // Search
 #include "bfs.h"
+#include "dfs.h"
 
 int main()
 {
@@ -39,6 +40,7 @@ int main()
     postTraverse(list, tree);
     printList(list);
     std::cout << std::endl;
+    std::cout << "-----------------------------------------" << std::endl;
     std::cout << std::endl;
 
 
@@ -52,4 +54,12 @@ int main()
     std::cout << "val: 12 " << "found: " << bfs(tree, 12) << std::endl;
     std::cout << "val: 4 " << "found: " << bfs(tree, 4) << std::endl;
     std::cout << "val: 22 " << "found: " << bfs(tree, 22) << std::endl;
+    std::cout << std::endl;
+
+    // DFS
+    std::cout << "DFS: " << std::endl;
+    std::cout << "val: 7 " << "found: " << dfs(tree, 7) << std::endl;
+    std::cout << "val: 12 " << "found: " << dfs(tree, 12) << std::endl;
+    std::cout << "val: 4 " << "found: " << dfs(tree, 4) << std::endl;
+    std::cout << "val: 22 " << "found: " << dfs(tree, 22) << std::endl;
 }
