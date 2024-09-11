@@ -14,7 +14,7 @@
 
 int main()
 {
-    binaryTree* tree = new binaryTree(4, new binaryTree(7, new binaryTree(9), new binaryTree(1)), new binaryTree(22));
+    binaryTree* tree = new binaryTree(4, new binaryTree(7, new binaryTree(9), new binaryTree(1)), new binaryTree(22, nullptr, new binaryTree(17)));
     
     // Traversals
     std::cout << "Traversals" << std::endl;
