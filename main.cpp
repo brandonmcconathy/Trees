@@ -62,4 +62,5 @@ int main()
     std::cout << "val: 12 " << "found: " << dfs(tree, 12) << std::endl;
     std::cout << "val: 4 " << "found: " << dfs(tree, 4) << std::endl;
     std::cout << "val: 22 " << "found: " << dfs(tree, 22) << std::endl;
+    std::cout << std::endl;
 }
