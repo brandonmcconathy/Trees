@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="bfs.cpp" />
     <ClCompile Include="binaryTree.cpp" />
+    <ClCompile Include="compare.cpp" />
     <ClCompile Include="dfs.cpp" />
     <ClCompile Include="inTraversal.cpp" />
     <ClCompile Include="main.cpp" />
@@ -139,6 +140,7 @@
   <ItemGroup>
     <ClInclude Include="bfs.h" />
     <ClInclude Include="binaryTree.h" />
+    <ClInclude Include="compare.h" />
     <ClInclude Include="dfs.h" />
     <ClInclude Include="inTraversal.h" />
     <ClInclude Include="postTraversal.h" />

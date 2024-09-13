@@ -12,6 +12,9 @@
 #include "bfs.h"
 #include "dfs.h"
 
+// Other
+#include "compare.h"
+
 int main()
 {
     binaryTree* tree = new binaryTree(4, new binaryTree(7, new binaryTree(9), new binaryTree(1)), new binaryTree(22, nullptr, new binaryTree(17)));
@@ -63,4 +66,12 @@ int main()
     std::cout << "val: 4 " << "found: " << dfs(tree, 4) << std::endl;
     std::cout << "val: 22 " << "found: " << dfs(tree, 22) << std::endl;
     std::cout << std::endl;
+    std::cout << std::endl;
+
+    // Compare
+    std::cout << "Compare" << std::endl;
+    std::cout << std::endl;
+    std::cout << "Same: " << compare(tree, tree) << std::endl;
+    std::cout << std::endl;
+
 }
