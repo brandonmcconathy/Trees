@@ -12,6 +12,9 @@
 #include "bfs.h"
 #include "dfs.h"
 
+// BST
+#include "insert.h"
+
 // Other
 #include "compare.h"
 
@@ -42,6 +45,7 @@ int main()
     list = {};
     postTraverse(list, tree);
     printList(list);
+
     std::cout << std::endl;
     std::cout << "-----------------------------------------" << std::endl;
     std::cout << std::endl;
@@ -65,13 +69,38 @@ int main()
     std::cout << "val: 12 " << "found: " << dfs(tree, 12) << std::endl;
     std::cout << "val: 4 " << "found: " << dfs(tree, 4) << std::endl;
     std::cout << "val: 22 " << "found: " << dfs(tree, 22) << std::endl;
+
     std::cout << std::endl;
+    std::cout << "-----------------------------------------" << std::endl;
     std::cout << std::endl;
 
     // Compare
     std::cout << "Compare" << std::endl;
     std::cout << std::endl;
     std::cout << "Same: " << compare(tree, tree) << std::endl;
+
+    std::cout << std::endl;
+    std::cout << "-----------------------------------------" << std::endl;
+    std::cout << std::endl;
+
+    // BST
+    std::cout << "Binary Search Tree" << std::endl;
+    std::cout << std::endl;
+
+    binaryTree* bst = new binaryTree(22);
+
+    insert(bst, 10);
+    insert(bst, 27);
+    insert(bst, 2);
+    insert(bst, 63);
+    insert(bst, 22);
+    insert(bst, 23);
+    list = {};
+    preTraverse(list, bst);
+    printList(list);
+
+    std::cout << std::endl;
+    std::cout << "-----------------------------------------" << std::endl;
     std::cout << std::endl;
 
 }
