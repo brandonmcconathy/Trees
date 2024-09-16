@@ -42,7 +42,10 @@
     <ClCompile Include="compare.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="insert.cpp">
+    <ClCompile Include="bstInsert.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bstDelete.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -71,7 +74,10 @@
     <ClInclude Include="compare.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="insert.h">
+    <ClInclude Include="bstInsert.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bstDelete.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

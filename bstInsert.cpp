@@ -1,7 +1,7 @@
-#include "insert.h"
+#include "bstInsert.h"
 #include "binaryTree.h"
 
-void insert(binaryTree* tree, int val) {
+void bstInsert(binaryTree* tree, int val) {
 	binaryTree* currNode = tree;
 	bool done = false;
 	while (!done) {

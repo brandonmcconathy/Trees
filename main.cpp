@@ -13,7 +13,8 @@
 #include "dfs.h"
 
 // BST
-#include "insert.h"
+#include "bstInsert.h"
+#include "bstDelete.h"
 
 // Other
 #include "compare.h"
@@ -89,12 +90,12 @@ int main()
 
     binaryTree* bst = new binaryTree(22);
 
-    insert(bst, 10);
-    insert(bst, 27);
-    insert(bst, 2);
-    insert(bst, 63);
-    insert(bst, 22);
-    insert(bst, 23);
+    bstInsert(bst, 10);
+    bstInsert(bst, 27);
+    bstInsert(bst, 2);
+    bstInsert(bst, 63);
+    bstInsert(bst, 22);
+    bstInsert(bst, 23);
     list = {};
     preTraverse(list, bst);
     printList(list);
