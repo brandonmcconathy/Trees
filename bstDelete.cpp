@@ -35,6 +35,27 @@ void bstDelete(binaryTree* tree, int val) {
 		else {
 			prevNode->right = nullptr;
 		}
+		return;
+	}
+
+	// Cases where currNode has 1 child
+	if (currNode->left == nullptr) {
+		if (prevNode->left == currNode) {
+			prevNode->left = currNode->left;
+		}
+		else {
+			prevNode->right = currNode->left;
+		}
+		return;
+	}
+	else if (currNode->right == nullptr) {
+		if (prevNode->left == currNode) {
+			prevNode->left = currNode->right;
+		}
+		else {
+			prevNode->right = currNode->right;
+		}
+		return;
 	}
 
 
