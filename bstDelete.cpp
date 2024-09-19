@@ -3,7 +3,7 @@
 
 void bstDelete(binaryTree* tree, int val) {
 	binaryTree* currNode = tree;
-	binaryTree* prevNode;
+	binaryTree* prevNode = nullptr;
 
 	// Puts currNode on node we need to delete and prevNode on node before
 	while (currNode->val != val) {
@@ -24,6 +24,21 @@ void bstDelete(binaryTree* tree, int val) {
 			else {
 				return;
 			}
+		}
+	}
+
+	// Cases where currNode is root
+	if (prevNode == nullptr) {
+		// Case of no children
+		if (currNode->left == nullptr && currNode->right == nullptr) {
+			tree = nullptr;
+		}
+		// Cases of 1 child
+		else if (currNode->left == nullptr) {
+			tree = tree->right;
+		}
+		else if (currNode->right == nullptr) {
+			tree = tree->left;
 		}
 	}
 
