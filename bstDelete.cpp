@@ -101,6 +101,22 @@ void bstDelete(binaryTree* tree, int val) {
 		return;
 	}
 
+	// Case of 2 children
+	binaryTree* prev = currNode;
+	binaryTree* curr = currNode->left;
+
+	while (curr->right) {
+		prev = curr;
+		curr = curr->right;
+	}
+	currNode->val = curr->val;
+
+	if (prev == currNode) {
+		currNode->left = currNode->left->left;
+	}
+	else {
+		prev->right = nullptr;
+	}
 
 	return;
 }
