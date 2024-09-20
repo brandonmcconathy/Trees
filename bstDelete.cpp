@@ -2,6 +2,10 @@
 #include "binaryTree.h"
 
 void bstDelete(binaryTree* tree, int val) {
+	if (tree == nullptr) {
+		return;
+	}
+
 	binaryTree* currNode = tree;
 	binaryTree* prevNode = nullptr;
 
@@ -32,13 +36,37 @@ void bstDelete(binaryTree* tree, int val) {
 		// Case of no children
 		if (currNode->left == nullptr && currNode->right == nullptr) {
 			tree = nullptr;
+			return;
 		}
+
 		// Cases of 1 child
 		else if (currNode->left == nullptr) {
 			tree = tree->right;
+			return;
 		}
 		else if (currNode->right == nullptr) {
 			tree = tree->left;
+			return;
+		}
+
+		// Case of 2 children
+		else {
+			binaryTree* prev = tree;
+			binaryTree* curr = tree->left;
+			while (curr->right) {
+				prev = curr;
+				curr = curr->right;
+			}
+			tree->val = curr->val;
+
+			if (prev == tree) {
+				tree->left = tree->left->left;
+			}
+			else {
+				prev->right = nullptr;
+			}
+
+			return;
 		}
 	}
 
