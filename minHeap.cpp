@@ -1,4 +1,5 @@
 #include "minHeap.h"
+#include <iostream>
 
 MinHeap::MinHeap() {
 	length = 0;
@@ -33,4 +34,11 @@ int MinHeap::peek() {
         return -1;
     }
     return heap[0];
+}
+
+void MinHeap::printList() {
+    for (int i = 0; i < length; ++i) {
+        std::cout << heap[i] << ", ";
+    }
+    std::cout << std::endl;
 }

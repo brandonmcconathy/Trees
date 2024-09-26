@@ -16,6 +16,9 @@
 #include "bstInsert.h"
 #include "bstDelete.h"
 
+// Heap
+#include "minHeap.h"
+
 // Other
 #include "compare.h"
 
@@ -103,5 +106,26 @@ int main()
     std::cout << std::endl;
     std::cout << "-----------------------------------------" << std::endl;
     std::cout << std::endl;
+
+    // MinHeap
+    std::cout << "Heap" << std::endl;
+    std::cout << std::endl;
+
+    MinHeap minHeap;
+
+    minHeap.add(10);
+    minHeap.add(12);
+    minHeap.add(2);
+    minHeap.add(1);
+    minHeap.add(15);
+    minHeap.add(5);
+
+    minHeap.printList();
+
+    std::cout << std::endl;
+    std::cout << "-----------------------------------------" << std::endl;
+    std::cout << std::endl;
+
+    return 0;
 
 }
