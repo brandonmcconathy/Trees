@@ -119,9 +119,19 @@ int main()
     minHeap.add(1);
     minHeap.add(15);
     minHeap.add(5);
+    
 
     minHeap.printList();
 
+    minHeap.pop();
+
+    minHeap.printList();
+
+    minHeap.add(1);
+    minHeap.add(10);
+    minHeap.add(12);
+
+    minHeap.printList();
     std::cout << std::endl;
     std::cout << "-----------------------------------------" << std::endl;
     std::cout << std::endl;

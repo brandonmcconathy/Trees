@@ -13,5 +13,6 @@ public:
 	int size();
 	void add(int val);
 	int peek();
+	void pop();
 	void printList();
 };
