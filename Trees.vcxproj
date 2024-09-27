@@ -135,6 +135,7 @@
     <ClCompile Include="bstInsert.cpp" />
     <ClCompile Include="inTraversal.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="maxHeap.cpp" />
     <ClCompile Include="minHeap.cpp" />
     <ClCompile Include="postTraversal.cpp" />
     <ClCompile Include="preTraverse.cpp" />
@@ -148,6 +149,7 @@
     <ClInclude Include="dfs.h" />
     <ClInclude Include="bstInsert.h" />
     <ClInclude Include="inTraversal.h" />
+    <ClInclude Include="maxHeap.h" />
     <ClInclude Include="minHeap.h" />
     <ClInclude Include="postTraversal.h" />
     <ClInclude Include="preTraversal.h" />
