@@ -37,7 +37,55 @@ int MaxHeap::peek() {
 }
 
 void MaxHeap::pop() {
-	return;
+    if (length == 0) {
+        return;
+    }
+    length--;
+    heap[0] = heap[length];
+    heap.resize(length);
+
+    int index = 0;
+    int child1 = (index * 2) + 1;
+    int child2 = (index * 2) + 2;
+
+    while (index < length && child1 < length) {
+
+        // Checks if all vals are in order
+        if (child2 < length) {
+            if (heap[child1] <= heap[index] && heap[child2] <= heap[index]) {
+                return;
+            }
+        }
+        else {
+            if (heap[child1] <= heap[index]) {
+                return;
+            }
+        }
+
+        // Case of 2 children
+        if (child2 < length) {
+            int max = heap[child1] > heap[child2] ? child1 : child2;
+            if (heap[index] < heap[max]) {
+                int temp = heap[index];
+                heap[index] = heap[max];
+                heap[max] = temp;
+                index = max;
+                child1 = (index * 2) + 1;
+                child2 = (index * 2) + 2;
+            }
+            else {
+                return;
+            }
+        }
+
+        // Case of 1 child
+        else {
+            int temp = heap[index];
+            heap[index] = heap[child1];
+            heap[child1] = temp;
+            return;
+        }
+    }
 }
 
 void MaxHeap::printList() {
