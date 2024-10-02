@@ -140,6 +140,7 @@
     <ClCompile Include="postTraversal.cpp" />
     <ClCompile Include="preTraverse.cpp" />
     <ClCompile Include="printList.cpp" />
+    <ClCompile Include="trie.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="bfs.h" />
@@ -154,6 +155,7 @@
     <ClInclude Include="postTraversal.h" />
     <ClInclude Include="preTraversal.h" />
     <ClInclude Include="printList.h" />
+    <ClInclude Include="trie.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="readme.txt" />
