@@ -18,6 +18,7 @@
 
 // Heap
 #include "minHeap.h"
+#include "maxHeap.h"
 
 // Other
 #include "compare.h"
@@ -120,7 +121,7 @@ int main()
     minHeap.add(15);
     minHeap.add(5);
     
-
+    std::cout << "MinHeap:" << std::endl;
     minHeap.printList();
 
     minHeap.pop();
@@ -132,6 +133,30 @@ int main()
     minHeap.add(12);
 
     minHeap.printList();
+    std::cout << std::endl;
+
+    MaxHeap maxHeap;
+
+    maxHeap.add(10);
+    maxHeap.add(12);
+    maxHeap.add(2);
+    maxHeap.add(1);
+    maxHeap.add(15);
+    maxHeap.add(5);
+
+    std::cout << "MaxHeap:" << std::endl;
+    maxHeap.printList();
+
+    maxHeap.pop();
+
+    maxHeap.printList();
+
+    maxHeap.add(1);
+    maxHeap.add(10);
+    maxHeap.add(12);
+
+    maxHeap.printList();
+
     std::cout << std::endl;
     std::cout << "-----------------------------------------" << std::endl;
     std::cout << std::endl;
