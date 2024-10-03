@@ -57,6 +57,9 @@
     <ClCompile Include="trie.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="trieNode.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="binaryTree.h">
@@ -96,6 +99,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="trie.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="trieNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
