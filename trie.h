@@ -6,7 +6,6 @@
 class Trie
 {
 private:
-	std::vector<bool> chars;
 
 public:
 	std::vector<trieNode*> children;

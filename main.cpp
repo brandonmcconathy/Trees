@@ -20,6 +20,9 @@
 #include "minHeap.h"
 #include "maxHeap.h"
 
+// Tire
+#include "trie.h"
+
 // Other
 #include "compare.h"
 
@@ -159,6 +162,17 @@ int main()
 
     std::cout << std::endl;
     std::cout << "-----------------------------------------" << std::endl;
+    std::cout << std::endl;
+
+    // Trie
+    std::cout << "Trie" << std::endl;
+    std::cout << std::endl;
+
+    Trie trie;
+
+    for (trieNode* child : trie.children) {
+        std::cout << child->get() << ", ";
+    }
     std::cout << std::endl;
 
     return 0;

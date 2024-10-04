@@ -10,4 +10,5 @@ private:
 
 public:
 	trieNode(char val);
+	char get();
 };
