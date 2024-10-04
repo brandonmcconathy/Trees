@@ -26,6 +26,15 @@
 // Other
 #include "compare.h"
 
+void traverse(trieNode* node) {
+    std::cout << node->get() << std::endl;
+    for (trieNode* node : node->children) {
+        traverse(node);
+    }
+}
+
+
+
 int main()
 {
     binaryTree* tree = new binaryTree(4, new binaryTree(7, new binaryTree(9), new binaryTree(1)), new binaryTree(22, nullptr, new binaryTree(17)));
@@ -170,10 +179,20 @@ int main()
 
     Trie trie;
 
-    for (trieNode* child : trie.children) {
-        std::cout << child->get() << ", ";
-    }
     std::cout << std::endl;
+    trie.add("apple");
+    trie.add("banana");
+    trie.add("zebra");
+    trie.add("app");
+    trie.add("ear");
+    trie.add("earring");
+    trie.add("elephant");
+
+
+    for (trieNode* node : trie.children) {
+        traverse(node);
+        std::cout << std::endl;
+    }
 
     return 0;
 

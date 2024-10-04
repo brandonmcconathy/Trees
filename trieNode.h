@@ -5,10 +5,16 @@ class trieNode
 {
 private:
 	char val;
-	std::vector<trieNode*> children;
 	bool isWord;
 
 public:
+	std::vector<trieNode*> children;
+
 	trieNode(char val);
 	char get();
+	bool checkChildren(char letter);
+	trieNode* getChild(char letter);
+	bool checkWord();
+	void addChild(char letter);
+	void makeWord();
 };
