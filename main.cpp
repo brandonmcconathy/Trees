@@ -26,14 +26,6 @@
 // Other
 #include "compare.h"
 
-void traverse(trieNode* node) {
-    std::cout << node->get() << std::endl;
-    for (trieNode* node : node->children) {
-        traverse(node);
-    }
-}
-
-
 
 int main()
 {
@@ -175,11 +167,10 @@ int main()
 
     // Trie
     std::cout << "Trie" << std::endl;
-    std::cout << std::endl;
+    std::cout << std::endl << std::endl;
 
     Trie trie;
 
-    std::cout << std::endl;
     trie.add("apple");
     trie.add("banana");
     trie.add("zebra");
@@ -188,11 +179,7 @@ int main()
     trie.add("earring");
     trie.add("elephant");
 
-
-    for (trieNode* node : trie.children) {
-        traverse(node);
-        std::cout << std::endl;
-    }
+    trie.print();
 
     return 0;
 
