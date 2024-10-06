@@ -38,3 +38,11 @@ void Trie::print() {
 		traverse(node);
 	}
 }
+
+void Trie::printWords() {
+	for (trieNode* node : children) {
+		std::string word = "";
+		word += node->get();
+	}
+	return;
+}
