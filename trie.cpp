@@ -39,10 +39,20 @@ void Trie::print() {
 	}
 }
 
+void Trie::wordTraverse(trieNode* node, std::string word) {
+	word = word + node->get();
+	if (node->checkWord()) {
+		std::cout << word << std::endl;
+	}
+	for (trieNode* curr : node->children) {
+		wordTraverse(curr, word);
+	}
+}
+
 void Trie::printWords() {
 	for (trieNode* node : children) {
 		std::string word = "";
-		word += node->get();
+		wordTraverse(node, word);
 	}
 	return;
 }

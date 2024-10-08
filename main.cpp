@@ -179,7 +179,7 @@ int main()
     trie.add("earring");
     trie.add("elephant");
 
-    trie.print();
+    trie.printWords();
 
     return 0;
 
