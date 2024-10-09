@@ -14,6 +14,7 @@ public:
 
 	Trie();
 	void add(std::string word);
+	void deleteWord(std::string word);
 	void print();
 	void printWords();
 };

@@ -26,6 +26,10 @@ void Trie::add(std::string word) {
 	currNode->makeWord();
 }
 
+void Trie::deleteWord(std::string word) {
+	return;
+}
+
 void Trie::traverse(trieNode* node) {
 	std::cout << node->get() << std::endl;
 	for (trieNode* curr : node->children) {
