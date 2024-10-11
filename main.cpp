@@ -32,8 +32,7 @@ int main()
     binaryTree* tree = new binaryTree(4, new binaryTree(7, new binaryTree(9), new binaryTree(1)), new binaryTree(22, nullptr, new binaryTree(17)));
     
     // Traversals
-    std::cout << "Traversals" << std::endl;
-    std::cout << std::endl;
+    std::cout << "Traversals\n" << std::endl;
 
     // Preorder
     std::cout << "Preorder: " << std::endl;
@@ -55,14 +54,12 @@ int main()
     postTraverse(list, tree);
     printList(list);
 
-    std::cout << std::endl;
-    std::cout << "-----------------------------------------" << std::endl;
-    std::cout << std::endl;
+
+    std::cout << "\n-----------------------------------------\n" << std::endl;
 
 
     // Search
-    std::cout << "Search" << std::endl;
-    std::cout << std::endl;
+    std::cout << "Search\n" << std::endl;
 
     // BFS
     std::cout << "BFS: " << std::endl;
@@ -79,22 +76,20 @@ int main()
     std::cout << "val: 4 " << "found: " << dfs(tree, 4) << std::endl;
     std::cout << "val: 22 " << "found: " << dfs(tree, 22) << std::endl;
 
-    std::cout << std::endl;
-    std::cout << "-----------------------------------------" << std::endl;
-    std::cout << std::endl;
+
+    std::cout << "\n-----------------------------------------\n" << std::endl;
+
 
     // Compare
-    std::cout << "Compare" << std::endl;
-    std::cout << std::endl;
+    std::cout << "Compare\n" << std::endl;
     std::cout << "Same: " << compare(tree, tree) << std::endl;
 
-    std::cout << std::endl;
-    std::cout << "-----------------------------------------" << std::endl;
-    std::cout << std::endl;
+
+    std::cout << "\n-----------------------------------------\n" << std::endl;
+
 
     // BST
-    std::cout << "Binary Search Tree" << std::endl;
-    std::cout << std::endl;
+    std::cout << "Binary Search Tree\n" << std::endl;
 
     binaryTree* bst = new binaryTree(22);
 
@@ -108,13 +103,12 @@ int main()
     preTraverse(list, bst);
     printList(list);
 
-    std::cout << std::endl;
-    std::cout << "-----------------------------------------" << std::endl;
-    std::cout << std::endl;
+
+    std::cout << "\n-----------------------------------------\n" << std::endl;
+
 
     // MinHeap
-    std::cout << "Heap" << std::endl;
-    std::cout << std::endl;
+    std::cout << "Heap\n" << std::endl;
 
     MinHeap minHeap;
 
@@ -161,13 +155,12 @@ int main()
 
     maxHeap.printList();
 
-    std::cout << std::endl;
-    std::cout << "-----------------------------------------" << std::endl;
-    std::cout << std::endl;
+
+    std::cout << "\n-----------------------------------------\n" << std::endl;
+
 
     // Trie
-    std::cout << "Trie" << std::endl;
-    std::cout << std::endl << std::endl;
+    std::cout << "Trie\n" << std::endl;
 
     Trie trie;
 
