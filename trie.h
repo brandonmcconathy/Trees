@@ -6,8 +6,7 @@
 class Trie
 {
 private:
-	void traverse(trieNode* node);
-	void wordTraverse(trieNode* node, std::string word);
+	void traverse(trieNode* node, std::string word);
 
 public:
 	std::vector<trieNode*> children;
@@ -16,5 +15,4 @@ public:
 	void add(std::string word);
 	void deleteWord(std::string word);
 	void print();
-	void printWords();
 };

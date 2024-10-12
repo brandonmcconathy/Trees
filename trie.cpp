@@ -30,33 +30,20 @@ void Trie::deleteWord(std::string word) {
 	return;
 }
 
-void Trie::traverse(trieNode* node) {
-	std::cout << node->get() << std::endl;
-	for (trieNode* curr : node->children) {
-		traverse(curr);
-	}
-}
-
-void Trie::print() {
-	for (trieNode* node : children) {
-		traverse(node);
-	}
-}
-
-void Trie::wordTraverse(trieNode* node, std::string word) {
+void Trie::traverse(trieNode* node, std::string word) {
 	word = word + node->get();
 	if (node->checkWord()) {
 		std::cout << word << std::endl;
 	}
 	for (trieNode* curr : node->children) {
-		wordTraverse(curr, word);
+		traverse(curr, word);
 	}
 }
 
-void Trie::printWords() {
+void Trie::print() {
 	for (trieNode* node : children) {
 		std::string word = "";
-		wordTraverse(node, word);
+		traverse(node, word);
 	}
 	return;
 }
