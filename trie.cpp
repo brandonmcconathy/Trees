@@ -27,9 +27,17 @@ void Trie::add(std::string word) {
 }
 
 void Trie::deleteWord(std::string word) {
+	if (word.size() < 2) {
+		return;
+	}
+
+	// If last letter in word has a child do not delete anything
+	// Remove nextLetter from children of lastCommonNode
+
 	trieNode* currNode = children[word[0] - 97];
 	std::vector<trieNode*> nodesToDelete;
 	trieNode* lastCommonNode = currNode;
+	char nextLetter = word[1];
 
 	for (int i = 1; i < word.size(); ++i) {
 		if (currNode->children.size() == 1 && i > 1) {
