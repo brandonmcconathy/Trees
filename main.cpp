@@ -173,6 +173,11 @@ int main()
     trie.add("elephant");
 
     trie.print();
+    std::cout << std::endl;
+
+    trie.deleteWord("elephant");
+
+    trie.print();
 
     return 0;
 

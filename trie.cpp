@@ -27,7 +27,34 @@ void Trie::add(std::string word) {
 }
 
 void Trie::deleteWord(std::string word) {
-	return;
+	trieNode* currNode = children[word[0] - 97];
+	std::vector<trieNode*> nodesToDelete;
+	trieNode* lastCommonNode = currNode;
+
+	for (int i = 1; i < word.size(); ++i) {
+		if (currNode->children.size() == 1 && i > 1) {
+			nodesToDelete.push_back(currNode);
+			currNode = currNode->children[0];
+		}
+		else {
+			lastCommonNode = currNode;
+			nodesToDelete.clear();
+			bool found = false;
+			for (trieNode* child : currNode->children) {
+				if (child->get() == word[i]) {
+					found = true;
+					currNode = child;
+				}
+			}
+			if (!found) {
+				return;
+			}
+		}
+	}
+	lastCommonNode->children.clear();
+	for (trieNode* node : nodesToDelete) {
+		delete node;
+	}
 }
 
 void Trie::traverse(trieNode* node, std::string word) {
@@ -45,5 +72,4 @@ void Trie::print() {
 		std::string word = "";
 		traverse(node, word);
 	}
-	return;
 }
